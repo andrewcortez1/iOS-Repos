@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IamRichv2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diamond" translatesAutoresizingMaskIntoConstraints="NO" id="EdQ-Wz-UPD">
+                                <rect key="frame" x="82" y="170.5" width="250" height="440"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="7O2-kp-3E4"/>
+                                    <constraint firstAttribute="width" secondItem="EdQ-Wz-UPD" secondAttribute="height" multiplier="304:535" id="GG1-8d-geb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="krX-hC-cM5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am Rich" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7R-0Q-cf6">
+                                <rect key="frame" x="20" y="94" width="374" height="71.5"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <constraints>
+                            <constraint firstItem="EdQ-Wz-UPD" firstAttribute="top" secondItem="W7R-0Q-cf6" secondAttribute="bottom" constant="5" id="8AI-EA-8Tm"/>
+                            <constraint firstItem="EdQ-Wz-UPD" firstAttribute="top" secondItem="W7R-0Q-cf6" secondAttribute="bottom" constant="20" id="Dd3-4C-rqv"/>
+                            <constraint firstItem="W7R-0Q-cf6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DtB-Wf-gca"/>
+                            <constraint firstItem="W7R-0Q-cf6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="HTx-Vw-3ox"/>
+                            <constraint firstItem="EdQ-Wz-UPD" firstAttribute="top" secondItem="W7R-0Q-cf6" secondAttribute="bottom" constant="5" id="NHx-30-6nG"/>
+                            <constraint firstItem="EdQ-Wz-UPD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ajP-YJ-Lsd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W7R-0Q-cf6" secondAttribute="trailing" id="hfb-Dq-Uvy"/>
+                            <constraint firstItem="EdQ-Wz-UPD" firstAttribute="top" secondItem="W7R-0Q-cf6" secondAttribute="bottom" constant="5" id="wdg-bq-2DX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="54.910714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="diamond" width="1030" height="754"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
