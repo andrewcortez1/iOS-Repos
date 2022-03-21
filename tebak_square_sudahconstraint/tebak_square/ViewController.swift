@@ -18,6 +18,7 @@
        //        }    }
     
 //maaf pak, kurang singkat , nyoba ui button named //outlet01, not find
+//source logo : freelogodesign.org
 
 import UIKit
 
@@ -32,6 +33,10 @@ class ViewController: UIViewController {
             x.backgroundColor = UIColor.gray
             x.tintColor = UIColor.gray
         }
+        else if (stat == "reset"){
+            x.backgroundColor = UIColor.black
+            x.tintColor = UIColor.black
+        }
         else{
             x.backgroundColor = UIColor.green
             x.tintColor = UIColor.green
@@ -42,12 +47,11 @@ class ViewController: UIViewController {
     var kesempatan = 5
     var jawaban = Int.random(in: 1...25)
     //var jawaban = 2
-    
     func sisaGuess(sisa : String) -> String{
         return "Sisa kesempatan : \(sisa)"
     }
-    
     @IBOutlet weak var labelvalue: UILabel!
+    
     
     @IBOutlet weak var outlet01: UIButton!
     @IBOutlet weak var outlet02: UIButton!
@@ -81,14 +85,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var outlet25: UIButton!
     
     //changeMerah(x: UIButton! (named : sender.titleLabel!.text))
-    
+    //todo : tambahin suara
     func action_button(jawaban : Int, label : String, outlet_stat : UIButton){
         if (String(jawaban) != label ){
             if (kesempatan > 0 ){
                 kesempatan-=1
                 changeWarna(stat:"salah", x: outlet_stat, label:labelvalue, message :
                 sisaGuess(sisa: String(kesempatan)))
-                print(jawaban)
+                print("Jawaban benar : " + String(jawaban))
             }
             else{
                 changeWarna(stat:"grey", x: outlet_stat, label:labelvalue, message:
@@ -96,7 +100,7 @@ class ViewController: UIViewController {
             }
         }
         else if (String(jawaban) == label && kesempatan > 0){
-            changeWarna(stat: "y", x: outlet_stat, label: labelvalue, message: "benar")
+            changeWarna(stat: "y", x: outlet_stat, label: labelvalue, message: "Selamat, Anda Benar")
             kesempatan=0
         }
         else{
@@ -189,6 +193,39 @@ class ViewController: UIViewController {
         action_button(jawaban: jawaban, label: sender.titleLabel!.text!, outlet_stat: outlet25)
     }
     
+    @IBAction func button_reset(_ sender: UIButton) {
+        jawaban = Int.random(in: 1...25)
+        kesempatan = 5
+        changeWarna(stat: "reset", x: outlet01, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet02, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet03, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet04, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet05, label: labelvalue, message: "")
+        
+        changeWarna(stat: "reset", x: outlet06, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet07, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet08, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet09, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet10, label: labelvalue, message: "")
+        
+        changeWarna(stat: "reset", x: outlet11, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet12, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet13, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet14, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet15, label: labelvalue, message: "")
+        
+        changeWarna(stat: "reset", x: outlet16, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet17, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet18, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet19, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet20, label: labelvalue, message: "")
+        
+        changeWarna(stat: "reset", x: outlet21, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet22, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet23, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet24, label: labelvalue, message: "")
+        changeWarna(stat: "reset", x: outlet25, label: labelvalue, message: "Guess 1 correct from 25 square")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
