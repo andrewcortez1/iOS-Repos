@@ -11,7 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    let waktuRebus = ["Soft": 3, "Medium": 5, "Hard": 10]
+    let waktuRebus = ["Soft": 3, "Medium": 5, "Hard": 10] //dictionary conversion
     var tick = 0
     var timer = Timer()
     var lama = 0
@@ -22,8 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var progress: UIProgressView!
     @IBOutlet weak var labelTimer: UILabel!
     @IBAction func pilihan(_ sender: UIButton) {
-        //print(sender.titleLabel?.text ?? "")
-        //print(waktuRebus[sender.currentTitle ?? ""]!)
+        //print(sender.titleLabel?.text ?? "") //ngambil gambar telur yang soft/medium/hard
+        //print(waktuRebus[sender.currentTitle ?? ""]!) //ngambil waktu rebus di dictionary
         if selesai == true {
             timer.invalidate()
             lama = waktuRebus[sender.currentTitle ?? ""]!
