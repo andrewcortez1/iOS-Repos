@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d7J-Mc-ukW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="wordle_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z3A-Z7-rs3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5t-1M-ZHn">
+                                        <rect key="frame" x="112" y="0.0" width="190" height="431"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORDLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sA-hs-cuI">
+                                                <rect key="frame" x="20" y="193.5" width="150" height="44.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1sA-hs-cuI" firstAttribute="centerY" secondItem="a5t-1M-ZHn" secondAttribute="centerY" id="W10-3w-ZTf"/>
+                                            <constraint firstItem="1sA-hs-cuI" firstAttribute="centerX" secondItem="a5t-1M-ZHn" secondAttribute="centerX" id="zdh-X1-TVZ"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="L5q-uv-lHO">
+                                        <rect key="frame" x="0.0" y="431" width="414" height="431"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTA-mY-Udf">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="215.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbg-tv-Jfj">
+                                                        <rect key="frame" x="0.0" y="10" width="414" height="195.5"/>
+                                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Play The Game"/>
+                                                        <connections>
+                                                            <action selector="goToPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5O1-98-tAV"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="gbg-tv-Jfj" secondAttribute="bottom" constant="10" id="8Bj-g2-ERc"/>
+                                                    <constraint firstItem="gbg-tv-Jfj" firstAttribute="top" secondItem="mTA-mY-Udf" secondAttribute="top" constant="10" id="fLe-Mo-jjv"/>
+                                                    <constraint firstItem="gbg-tv-Jfj" firstAttribute="leading" secondItem="mTA-mY-Udf" secondAttribute="leading" id="hLI-R5-kTa"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gbg-tv-Jfj" secondAttribute="trailing" id="mhQ-Ib-fX0"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOA-x9-tfG">
+                                                <rect key="frame" x="0.0" y="215.5" width="414" height="215.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEl-pd-lTD">
+                                                        <rect key="frame" x="0.0" y="10" width="414" height="195.5"/>
+                                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="How To Play?"/>
+                                                        <connections>
+                                                            <action selector="goToHint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lws-YF-w0p"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="pEl-pd-lTD" secondAttribute="bottom" constant="10" id="D1O-yE-uBS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="pEl-pd-lTD" secondAttribute="trailing" id="Gdl-Ke-rFS"/>
+                                                    <constraint firstItem="pEl-pd-lTD" firstAttribute="top" secondItem="gOA-x9-tfG" secondAttribute="top" constant="10" id="sTk-s3-seP"/>
+                                                    <constraint firstItem="pEl-pd-lTD" firstAttribute="leading" secondItem="gOA-x9-tfG" secondAttribute="leading" id="xmw-Db-yVy"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="L5q-uv-lHO" secondAttribute="bottom" id="40v-Fd-O5X"/>
+                                    <constraint firstItem="L5q-uv-lHO" firstAttribute="leading" secondItem="z3A-Z7-rs3" secondAttribute="leading" id="7OT-t3-mxk"/>
+                                    <constraint firstItem="L5q-uv-lHO" firstAttribute="top" secondItem="a5t-1M-ZHn" secondAttribute="bottom" id="iNe-zX-WMj"/>
+                                    <constraint firstAttribute="trailing" secondItem="L5q-uv-lHO" secondAttribute="trailing" id="plt-6M-u59"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z3A-Z7-rs3" secondAttribute="trailing" id="EbK-P5-ehl"/>
+                            <constraint firstItem="z3A-Z7-rs3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cpc-gN-r8G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z3A-Z7-rs3" secondAttribute="bottom" id="gXz-Hc-ttW"/>
+                            <constraint firstItem="z3A-Z7-rs3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oCT-0v-UUX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rDq-fu-Iyo"/>
+                    <connections>
+                        <segue destination="0Uv-nc-JX2" kind="show" identifier="goToHow" id="siq-N4-lg5"/>
+                        <segue destination="Zee-rS-kKs" kind="show" identifier="segue_play" id="QeD-YY-deX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="54.910714285714285"/>
+        </scene>
+        <!--Play The Game-->
+        <scene sceneID="DBH-r1-NXW">
+            <objects>
+                <viewController id="Zee-rS-kKs" customClass="Play_The_Game" customModule="wordle_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MPg-Xk-0P4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fDs-3R-u3s">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0c-tS-oXG" userLabel="tebak_1">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="73.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Vx-Cm-qdy">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="73.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gxa-ig-Kvk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qr0-ln-JaF">
+                                                        <rect key="frame" x="84.5" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kj8-Lx-ViG">
+                                                        <rect key="frame" x="169" y="0.0" width="76" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLF-XR-00S">
+                                                        <rect key="frame" x="253" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="edQ-k9-ax6">
+                                                        <rect key="frame" x="337.5" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="6Vx-Cm-qdy" firstAttribute="top" secondItem="Z0c-tS-oXG" secondAttribute="top" id="VGU-7r-kFQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="6Vx-Cm-qdy" secondAttribute="bottom" id="kWc-xe-j8z"/>
+                                            <constraint firstItem="6Vx-Cm-qdy" firstAttribute="leading" secondItem="Z0c-tS-oXG" secondAttribute="leading" id="kdv-0b-aM4"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Vx-Cm-qdy" secondAttribute="trailing" id="rl0-jV-LGJ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ov-Gz-oej" userLabel="tebak_2">
+                                        <rect key="frame" x="0.0" y="73.5" width="414" height="73.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N5U-0D-i8S">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="73.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oav-xW-qbo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSc-nf-P7V">
+                                                        <rect key="frame" x="84.5" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ipj-Pe-f0k">
+                                                        <rect key="frame" x="169" y="0.0" width="76" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hhb-1C-0sF">
+                                                        <rect key="frame" x="253" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wIq-1Q-RyK">
+                                                        <rect key="frame" x="337.5" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="N5U-0D-i8S" secondAttribute="bottom" id="D7T-68-hmv"/>
+                                            <constraint firstAttribute="trailing" secondItem="N5U-0D-i8S" secondAttribute="trailing" id="Rmn-4z-ijO"/>
+                                            <constraint firstItem="N5U-0D-i8S" firstAttribute="leading" secondItem="7ov-Gz-oej" secondAttribute="leading" id="gtd-hY-XId"/>
+                                            <constraint firstItem="N5U-0D-i8S" firstAttribute="top" secondItem="7ov-Gz-oej" secondAttribute="top" id="vUz-AW-Bz6"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSO-UY-ap5" userLabel="tebak_3">
+                                        <rect key="frame" x="0.0" y="147" width="414" height="73.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uoU-Ho-U2V">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="73.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WCU-Ya-afC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eWo-yG-Uz2">
+                                                        <rect key="frame" x="84.5" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qyk-zI-eLZ">
+                                                        <rect key="frame" x="169" y="0.0" width="76" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aP9-iN-Ci6">
+                                                        <rect key="frame" x="253" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IKL-mZ-6RT">
+                                                        <rect key="frame" x="337.5" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="uoU-Ho-U2V" secondAttribute="trailing" id="0cY-WT-atg"/>
+                                            <constraint firstItem="uoU-Ho-U2V" firstAttribute="top" secondItem="qSO-UY-ap5" secondAttribute="top" id="6uY-2g-ykB"/>
+                                            <constraint firstAttribute="bottom" secondItem="uoU-Ho-U2V" secondAttribute="bottom" id="9Rf-Xz-lOC"/>
+                                            <constraint firstItem="uoU-Ho-U2V" firstAttribute="leading" secondItem="qSO-UY-ap5" secondAttribute="leading" id="nQ4-na-EdI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxI-1R-OxB" userLabel="tebak_4">
+                                        <rect key="frame" x="0.0" y="220.5" width="414" height="73.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Qj-fu-ydr">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="73.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9tI-Hq-bGE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5E-IM-Acx">
+                                                        <rect key="frame" x="84.5" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wh6-QC-Tfl">
+                                                        <rect key="frame" x="169" y="0.0" width="76" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="llx-4V-oKH">
+                                                        <rect key="frame" x="253" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZI1-Bu-e0j">
+                                                        <rect key="frame" x="337.5" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="4Qj-fu-ydr" secondAttribute="bottom" id="2WF-cX-fdf"/>
+                                            <constraint firstItem="4Qj-fu-ydr" firstAttribute="top" secondItem="ZxI-1R-OxB" secondAttribute="top" id="Y0P-sF-LRY"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Qj-fu-ydr" secondAttribute="trailing" id="YeY-BJ-gaP"/>
+                                            <constraint firstItem="4Qj-fu-ydr" firstAttribute="leading" secondItem="ZxI-1R-OxB" secondAttribute="leading" id="roX-7D-qIl"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6E-s2-1pC" userLabel="tebak_5">
+                                        <rect key="frame" x="0.0" y="294" width="414" height="73.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ATe-ky-zLE">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="73.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BDm-ek-hyy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="If1-0h-e4f">
+                                                        <rect key="frame" x="84.5" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UcZ-dF-CVl">
+                                                        <rect key="frame" x="169" y="0.0" width="76" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SnR-OK-YRr">
+                                                        <rect key="frame" x="253" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R7y-tX-eF2">
+                                                        <rect key="frame" x="337.5" y="0.0" width="76.5" height="73.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ATe-ky-zLE" firstAttribute="top" secondItem="z6E-s2-1pC" secondAttribute="top" id="BNE-KK-hHN"/>
+                                            <constraint firstAttribute="bottom" secondItem="ATe-ky-zLE" secondAttribute="bottom" id="QCb-Yg-Uqu"/>
+                                            <constraint firstItem="ATe-ky-zLE" firstAttribute="leading" secondItem="z6E-s2-1pC" secondAttribute="leading" id="ZQe-Qk-nlU"/>
+                                            <constraint firstAttribute="trailing" secondItem="ATe-ky-zLE" secondAttribute="trailing" id="lAi-Uk-g2p"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8q7-Fg-A0q" userLabel="view_timer">
+                                        <rect key="frame" x="0.0" y="367.5" width="414" height="73"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pfP-m6-oeO">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Joi-gK-KHI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="pfP-m6-oeO" secondAttribute="bottom" id="4Ug-rj-IjD"/>
+                                            <constraint firstItem="pfP-m6-oeO" firstAttribute="leading" secondItem="8q7-Fg-A0q" secondAttribute="leading" id="5iF-09-cz9"/>
+                                            <constraint firstAttribute="trailing" secondItem="pfP-m6-oeO" secondAttribute="trailing" id="gUC-4b-g8C"/>
+                                            <constraint firstItem="pfP-m6-oeO" firstAttribute="top" secondItem="8q7-Fg-A0q" secondAttribute="top" id="qrC-Kk-DAg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFs-ZS-gKh" userLabel="view_retry">
+                                        <rect key="frame" x="0.0" y="440.5" width="414" height="73.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2f-c3-Pvv">
+                                                <rect key="frame" x="167.5" y="21.5" width="79.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="repeat.circle.fill" catalog="system" title="Retry"/>
+                                                <connections>
+                                                    <action selector="button_retry:" destination="Zee-rS-kKs" eventType="touchUpInside" id="sF7-dv-Jou"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="k2f-c3-Pvv" firstAttribute="centerY" secondItem="kFs-ZS-gKh" secondAttribute="centerY" id="XMx-sb-PCu"/>
+                                            <constraint firstItem="k2f-c3-Pvv" firstAttribute="centerX" secondItem="kFs-ZS-gKh" secondAttribute="centerX" id="iMm-Wb-aiI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HS8-rG-nKv" userLabel="keyboard_one">
+                                        <rect key="frame" x="0.0" y="514" width="414" height="73.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="GXb-ac-W5h">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="73.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZh-8e-XSf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="q" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="c5X-qc-R25"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3E-3E-hv4">
+                                                        <rect key="frame" x="41.5" y="0.0" width="40.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="w" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="oxO-sy-vrL"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6C-OP-jmu">
+                                                        <rect key="frame" x="83" y="0.0" width="40.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="e" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="vmF-3b-EPf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1V-ae-8H7">
+                                                        <rect key="frame" x="124.5" y="0.0" width="40.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="r" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="utn-2u-24x"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wC-y5-wLK">
+                                                        <rect key="frame" x="166" y="0.0" width="40.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="t" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="cUj-t2-CI5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeY-w4-8Gy">
+                                                        <rect key="frame" x="207.5" y="0.0" width="40.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="y" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="qWz-S8-dNq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1h-FU-viK">
+                                                        <rect key="frame" x="249" y="0.0" width="40.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="u" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="Hcw-HA-kqM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLd-Rj-2FW">
+                                                        <rect key="frame" x="290.5" y="0.0" width="40.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="i" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="Vhr-Ka-mdy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YL-3H-jbE">
+                                                        <rect key="frame" x="332" y="0.0" width="40.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="o" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="Btb-8k-JSD"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0N4-cU-7Kq">
+                                                        <rect key="frame" x="373.5" y="0.0" width="40.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="p" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="Yyi-Zr-z1a"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="GXb-ac-W5h" secondAttribute="bottom" id="2Uz-Bf-oGE"/>
+                                            <constraint firstAttribute="trailing" secondItem="GXb-ac-W5h" secondAttribute="trailing" id="j6T-W3-mho"/>
+                                            <constraint firstItem="GXb-ac-W5h" firstAttribute="leading" secondItem="HS8-rG-nKv" secondAttribute="leading" id="qOS-gm-VNN"/>
+                                            <constraint firstItem="GXb-ac-W5h" firstAttribute="top" secondItem="HS8-rG-nKv" secondAttribute="top" id="t5K-KT-G0v"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUA-p4-FHo" userLabel="keyboard_two">
+                                        <rect key="frame" x="0.0" y="587.5" width="414" height="73.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Let-Cr-aBu">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="73.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xq0-xm-aSN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="44" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="a" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="ABf-Ek-q70"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iK-d0-Q7R">
+                                                        <rect key="frame" x="46" y="0.0" width="44.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="s" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="Y5z-QC-Kja"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YG6-YH-dKp">
+                                                        <rect key="frame" x="92.5" y="0.0" width="44" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="d" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="KuS-8e-bdB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATh-dT-lTd">
+                                                        <rect key="frame" x="138.5" y="0.0" width="44.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="f" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="DJN-9O-35D"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFC-5J-37s">
+                                                        <rect key="frame" x="185" y="0.0" width="44" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="g" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="3ky-qd-Klz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXX-CA-wND">
+                                                        <rect key="frame" x="231" y="0.0" width="44.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="h" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="0iX-Pd-rEV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqo-s9-gUl">
+                                                        <rect key="frame" x="277.5" y="0.0" width="44" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="j" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="2hX-G0-1rG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2r-j2-fZI">
+                                                        <rect key="frame" x="323.5" y="0.0" width="44.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="k" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="mAv-uD-4Zb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgT-yl-7sD">
+                                                        <rect key="frame" x="370" y="0.0" width="44" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="l" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="Q2c-bq-qMl"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Let-Cr-aBu" secondAttribute="bottom" id="5Qk-QI-J31"/>
+                                            <constraint firstItem="Let-Cr-aBu" firstAttribute="top" secondItem="XUA-p4-FHo" secondAttribute="top" id="IcO-yN-Noi"/>
+                                            <constraint firstItem="Let-Cr-aBu" firstAttribute="leading" secondItem="XUA-p4-FHo" secondAttribute="leading" id="fsU-XE-8ce"/>
+                                            <constraint firstAttribute="trailing" secondItem="Let-Cr-aBu" secondAttribute="trailing" id="mVn-LF-EGD"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DhK-9W-ELe" userLabel="keyboard_three">
+                                        <rect key="frame" x="0.0" y="661" width="414" height="73.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="cX6-o9-l9O">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="73.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTr-RT-bG3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="57.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="z" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="yi9-c8-gdq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BW-wl-SVm">
+                                                        <rect key="frame" x="59.5" y="0.0" width="57.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="x" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="cyi-h3-drY"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jl-K1-9zZ">
+                                                        <rect key="frame" x="119" y="0.0" width="57.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="c" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="lFa-Kb-5v6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRn-JA-iya">
+                                                        <rect key="frame" x="178.5" y="0.0" width="57" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="v" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="9V2-2G-BkU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2R-hP-dBE">
+                                                        <rect key="frame" x="237.5" y="0.0" width="57.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="b" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="tNe-ek-eXF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdx-ag-dHM">
+                                                        <rect key="frame" x="297" y="0.0" width="57.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="n" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="kzy-Km-rTM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gz6-gw-Ffq">
+                                                        <rect key="frame" x="356.5" y="0.0" width="57.5" height="73.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="m" cornerStyle="fixed">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="11"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="keebs:" destination="Zee-rS-kKs" eventType="touchUpInside" id="Rey-yS-SVb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="cX6-o9-l9O" secondAttribute="bottom" id="81i-Ek-Zto"/>
+                                            <constraint firstItem="cX6-o9-l9O" firstAttribute="top" secondItem="DhK-9W-ELe" secondAttribute="top" id="9UE-tg-QTz"/>
+                                            <constraint firstAttribute="trailing" secondItem="cX6-o9-l9O" secondAttribute="trailing" id="skb-gv-7b6"/>
+                                            <constraint firstItem="cX6-o9-l9O" firstAttribute="leading" secondItem="DhK-9W-ELe" secondAttribute="leading" id="v33-Bz-OEl"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blJ-6S-QAF" userLabel="view_checker">
+                                        <rect key="frame" x="0.0" y="734.5" width="414" height="73.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUn-4H-t1x">
+                                                <rect key="frame" x="128.5" y="21.5" width="157.5" height="31"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Check (Every 5 turn)">
+                                                    <color key="baseForegroundColor" red="0.50588235290000005" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="check_turn:" destination="Zee-rS-kKs" eventType="touchUpInside" id="ADb-Ee-SYU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="OUn-4H-t1x" firstAttribute="centerY" secondItem="blJ-6S-QAF" secondAttribute="centerY" id="MzK-cq-S5b"/>
+                                            <constraint firstItem="OUn-4H-t1x" firstAttribute="centerX" secondItem="blJ-6S-QAF" secondAttribute="centerX" id="bZC-fp-NNG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8q7-Fg-A0q" firstAttribute="leading" secondItem="fDs-3R-u3s" secondAttribute="leading" id="2Xb-sN-SHK"/>
+                                    <constraint firstItem="Z0c-tS-oXG" firstAttribute="top" secondItem="fDs-3R-u3s" secondAttribute="top" id="48g-kD-aMw"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z0c-tS-oXG" secondAttribute="trailing" id="49B-el-d6w"/>
+                                    <constraint firstAttribute="trailing" secondItem="z6E-s2-1pC" secondAttribute="trailing" id="4I7-Nb-ZJ4"/>
+                                    <constraint firstItem="ZxI-1R-OxB" firstAttribute="top" secondItem="qSO-UY-ap5" secondAttribute="bottom" id="B3W-Tl-99U"/>
+                                    <constraint firstItem="qSO-UY-ap5" firstAttribute="leading" secondItem="fDs-3R-u3s" secondAttribute="leading" id="CAX-q4-hmp"/>
+                                    <constraint firstItem="qSO-UY-ap5" firstAttribute="top" secondItem="7ov-Gz-oej" secondAttribute="bottom" id="Cmm-zP-yk6"/>
+                                    <constraint firstAttribute="bottom" secondItem="blJ-6S-QAF" secondAttribute="bottom" id="GZy-DD-XRn"/>
+                                    <constraint firstItem="8q7-Fg-A0q" firstAttribute="top" secondItem="z6E-s2-1pC" secondAttribute="bottom" id="Goy-Aw-1Ke"/>
+                                    <constraint firstItem="z6E-s2-1pC" firstAttribute="top" secondItem="ZxI-1R-OxB" secondAttribute="bottom" id="J0L-8n-97p"/>
+                                    <constraint firstItem="kFs-ZS-gKh" firstAttribute="top" secondItem="8q7-Fg-A0q" secondAttribute="bottom" id="Lag-Rp-e8s"/>
+                                    <constraint firstAttribute="trailing" secondItem="qSO-UY-ap5" secondAttribute="trailing" id="NiY-Qi-CVa"/>
+                                    <constraint firstItem="DhK-9W-ELe" firstAttribute="top" secondItem="XUA-p4-FHo" secondAttribute="bottom" id="OCf-x5-5qV"/>
+                                    <constraint firstItem="z6E-s2-1pC" firstAttribute="top" secondItem="ZxI-1R-OxB" secondAttribute="bottom" id="PNJ-WG-gHn"/>
+                                    <constraint firstItem="blJ-6S-QAF" firstAttribute="top" secondItem="DhK-9W-ELe" secondAttribute="bottom" id="PgH-62-xEt"/>
+                                    <constraint firstAttribute="trailing" secondItem="kFs-ZS-gKh" secondAttribute="trailing" id="RPf-Va-v7O"/>
+                                    <constraint firstItem="DhK-9W-ELe" firstAttribute="leading" secondItem="fDs-3R-u3s" secondAttribute="leading" id="Ruo-ck-yYb"/>
+                                    <constraint firstItem="7ov-Gz-oej" firstAttribute="top" secondItem="Z0c-tS-oXG" secondAttribute="bottom" id="V2K-U3-thp"/>
+                                    <constraint firstItem="DhK-9W-ELe" firstAttribute="top" secondItem="XUA-p4-FHo" secondAttribute="bottom" id="V8S-aD-MaF"/>
+                                    <constraint firstItem="ZxI-1R-OxB" firstAttribute="leading" secondItem="fDs-3R-u3s" secondAttribute="leading" id="Xeq-gE-dba"/>
+                                    <constraint firstItem="XUA-p4-FHo" firstAttribute="leading" secondItem="fDs-3R-u3s" secondAttribute="leading" id="Yg7-6O-JmG"/>
+                                    <constraint firstItem="HS8-rG-nKv" firstAttribute="top" secondItem="kFs-ZS-gKh" secondAttribute="bottom" id="ZuD-FE-7cT"/>
+                                    <constraint firstAttribute="trailing" secondItem="8q7-Fg-A0q" secondAttribute="trailing" id="aSI-m4-gFS"/>
+                                    <constraint firstItem="Z0c-tS-oXG" firstAttribute="leading" secondItem="fDs-3R-u3s" secondAttribute="leading" id="ba8-r2-kW2"/>
+                                    <constraint firstItem="blJ-6S-QAF" firstAttribute="top" secondItem="DhK-9W-ELe" secondAttribute="bottom" id="bmw-TT-bhZ"/>
+                                    <constraint firstItem="HS8-rG-nKv" firstAttribute="top" secondItem="kFs-ZS-gKh" secondAttribute="bottom" id="dXd-lY-mHp"/>
+                                    <constraint firstItem="7ov-Gz-oej" firstAttribute="top" secondItem="Z0c-tS-oXG" secondAttribute="bottom" id="dZ7-NJ-3OR"/>
+                                    <constraint firstAttribute="trailing" secondItem="HS8-rG-nKv" secondAttribute="trailing" id="dlL-C0-Pk0"/>
+                                    <constraint firstItem="qSO-UY-ap5" firstAttribute="top" secondItem="7ov-Gz-oej" secondAttribute="bottom" id="ekE-HP-MDd"/>
+                                    <constraint firstAttribute="trailing" secondItem="DhK-9W-ELe" secondAttribute="trailing" id="ftb-An-jT7"/>
+                                    <constraint firstAttribute="trailing" secondItem="XUA-p4-FHo" secondAttribute="trailing" id="gra-r5-R3W"/>
+                                    <constraint firstItem="kFs-ZS-gKh" firstAttribute="leading" secondItem="fDs-3R-u3s" secondAttribute="leading" id="iaW-fX-lvp"/>
+                                    <constraint firstItem="8q7-Fg-A0q" firstAttribute="top" secondItem="z6E-s2-1pC" secondAttribute="bottom" id="isC-OY-xNp"/>
+                                    <constraint firstItem="kFs-ZS-gKh" firstAttribute="top" secondItem="8q7-Fg-A0q" secondAttribute="bottom" id="kpc-40-HoE"/>
+                                    <constraint firstAttribute="trailing" secondItem="blJ-6S-QAF" secondAttribute="trailing" id="n6I-xF-6XL"/>
+                                    <constraint firstItem="HS8-rG-nKv" firstAttribute="leading" secondItem="fDs-3R-u3s" secondAttribute="leading" id="tKQ-Iw-xgd"/>
+                                    <constraint firstItem="XUA-p4-FHo" firstAttribute="top" secondItem="HS8-rG-nKv" secondAttribute="bottom" id="tMh-fJ-dwt"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZxI-1R-OxB" secondAttribute="trailing" id="thF-D6-Lsm"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ov-Gz-oej" secondAttribute="trailing" id="uBp-C2-eBt"/>
+                                    <constraint firstItem="blJ-6S-QAF" firstAttribute="leading" secondItem="fDs-3R-u3s" secondAttribute="leading" id="wMZ-kc-9It"/>
+                                    <constraint firstItem="ZxI-1R-OxB" firstAttribute="top" secondItem="qSO-UY-ap5" secondAttribute="bottom" id="x6H-Tc-bS1"/>
+                                    <constraint firstItem="XUA-p4-FHo" firstAttribute="top" secondItem="HS8-rG-nKv" secondAttribute="bottom" id="xbG-57-tSb"/>
+                                    <constraint firstItem="7ov-Gz-oej" firstAttribute="leading" secondItem="fDs-3R-u3s" secondAttribute="leading" id="y2d-f1-Pfi"/>
+                                    <constraint firstItem="z6E-s2-1pC" firstAttribute="leading" secondItem="fDs-3R-u3s" secondAttribute="leading" id="z5R-cn-FRh"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3dz-ue-q0C"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                        <constraints>
+                            <constraint firstItem="3dz-ue-q0C" firstAttribute="trailing" secondItem="fDs-3R-u3s" secondAttribute="trailing" id="AhU-wm-7Qg"/>
+                            <constraint firstItem="fDs-3R-u3s" firstAttribute="top" secondItem="3dz-ue-q0C" secondAttribute="top" id="aKu-w7-2Ou"/>
+                            <constraint firstAttribute="bottom" secondItem="fDs-3R-u3s" secondAttribute="bottom" id="qcl-W8-VgQ"/>
+                            <constraint firstItem="fDs-3R-u3s" firstAttribute="leading" secondItem="MPg-Xk-0P4" secondAttribute="leading" id="yCa-KW-1Cz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3gp-GR-YeR"/>
+                    <connections>
+                        <outlet property="label_time" destination="Joi-gK-KHI" id="5nT-hb-rYM"/>
+                        <outlet property="outlet01" destination="Gxa-ig-Kvk" id="rTj-JU-82G"/>
+                        <outlet property="outlet02" destination="Qr0-ln-JaF" id="Ufd-Mg-aGn"/>
+                        <outlet property="outlet03" destination="kj8-Lx-ViG" id="Ivg-83-6nj"/>
+                        <outlet property="outlet04" destination="kLF-XR-00S" id="ohi-ys-8xD"/>
+                        <outlet property="outlet05" destination="edQ-k9-ax6" id="7yJ-dm-hVm"/>
+                        <outlet property="outlet06" destination="oav-xW-qbo" id="deh-Nn-leb"/>
+                        <outlet property="outlet07" destination="NSc-nf-P7V" id="DXE-YF-epT"/>
+                        <outlet property="outlet08" destination="Ipj-Pe-f0k" id="wxi-jy-uoC"/>
+                        <outlet property="outlet09" destination="Hhb-1C-0sF" id="qZj-4W-zjo"/>
+                        <outlet property="outlet10" destination="wIq-1Q-RyK" id="xg1-lb-j6P"/>
+                        <outlet property="outlet11" destination="WCU-Ya-afC" id="jA7-C7-Onc"/>
+                        <outlet property="outlet12" destination="eWo-yG-Uz2" id="jek-JZ-A4Z"/>
+                        <outlet property="outlet13" destination="Qyk-zI-eLZ" id="IgN-SU-y84"/>
+                        <outlet property="outlet14" destination="aP9-iN-Ci6" id="rUX-bk-tv5"/>
+                        <outlet property="outlet15" destination="IKL-mZ-6RT" id="0bO-cd-LaQ"/>
+                        <outlet property="outlet16" destination="9tI-Hq-bGE" id="1S1-mS-SFB"/>
+                        <outlet property="outlet17" destination="T5E-IM-Acx" id="diy-xJ-DpU"/>
+                        <outlet property="outlet18" destination="wh6-QC-Tfl" id="mCp-Kr-khJ"/>
+                        <outlet property="outlet19" destination="llx-4V-oKH" id="RGv-TZ-Hmq"/>
+                        <outlet property="outlet20" destination="ZI1-Bu-e0j" id="1Sa-fT-a6D"/>
+                        <outlet property="outlet21" destination="BDm-ek-hyy" id="n5I-uW-WDg"/>
+                        <outlet property="outlet22" destination="If1-0h-e4f" id="aoy-pI-lr5"/>
+                        <outlet property="outlet23" destination="UcZ-dF-CVl" id="43Z-VO-MX8"/>
+                        <outlet property="outlet24" destination="SnR-OK-YRr" id="OhK-0W-5zn"/>
+                        <outlet property="outlet25" destination="R7y-tX-eF2" id="pfP-6y-JZr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sPF-61-hi0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828.985507246377" y="-208.25892857142856"/>
+        </scene>
+        <!--How To Play-->
+        <scene sceneID="1UM-dz-91B">
+            <objects>
+                <viewController id="0Uv-nc-JX2" customClass="HowToPlay" customModule="wordle_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="raP-fY-zat">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WordleGuide_2" translatesAutoresizingMaskIntoConstraints="NO" id="CVk-kS-sKi">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lwn-JS-O4A"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                        <constraints>
+                            <constraint firstItem="Lwn-JS-O4A" firstAttribute="trailing" secondItem="CVk-kS-sKi" secondAttribute="trailing" id="C4O-B6-kAr"/>
+                            <constraint firstItem="CVk-kS-sKi" firstAttribute="leading" secondItem="Lwn-JS-O4A" secondAttribute="leading" id="KZJ-mV-0Dx"/>
+                            <constraint firstItem="CVk-kS-sKi" firstAttribute="top" secondItem="Lwn-JS-O4A" secondAttribute="top" id="fml-Bg-f4M"/>
+                            <constraint firstItem="Lwn-JS-O4A" firstAttribute="bottom" secondItem="CVk-kS-sKi" secondAttribute="bottom" id="te2-1S-80S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="pfc-1u-KZF">
+                        <barButtonItem key="backBarButtonItem" title="Back, warna mengikuti kelas" id="Cw6-rJ-Eku"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfT-Vi-6VG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1829" y="469"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UO3-J5-7Wd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d7J-Mc-ukW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U8s-Br-hEQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gzW-Xh-lza"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nJ-5e-z1m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="54.910714285714285"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="linkColor"/>
+    <resources>
+        <image name="WordleGuide_2" width="540" height="960"/>
+        <image name="repeat.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
